@@ -107,3 +107,81 @@
     /* Esto asegura que el navegador ignore el elemento para clics */
     transition: opacity 0.8s ease, visibility 0.8s ease;
 }
+
+/* Estilo para las tarjetas de información sobre la imagen de fondo */
+.info-card {
+    background: rgba(255, 255, 255, 0.1); /* Blanco muy transparente */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque de cristal */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.text-info {
+    color: #81d4fa !important; /* Un celeste que resalta sobre fondos oscuros */
+}
+
+/* Ajuste de altura para la sección de información */
+#informacion {
+    height: auto !important; /* Permite que el contenido largo crezca */
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-image: url('https://images.unsplash.com/photo-1590102422318-625d46c75530?q=80&w=1470&auto=format&fit=crop'); /* Imagen de lactancia */
+}
+
+/* Responsividad: En móviles quitamos el min-height excesivo */
+@media (max-width: 991px) {
+    #informacion {
+        height: auto;
+    }
+}
+
+
+/* Nueva clase para secciones con mucho contenido */
+.section-hero-flexible {
+    position: relative;
+    min-height: 100vh; /* Al menos el alto de la pantalla */
+    height: auto;      /* Crece si el contenido es mucho */
+    width: 100%;
+    display: flex;
+    align-items: flex-start; /* Empieza desde arriba */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    padding-top: 80px; /* Evita que la navbar tape el título */
+}
+
+/* El secreto para que el fondo oscuro nunca se corte */
+.overlay-full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; /* Esto estira el fondo hasta el final real de la sección */
+    background: rgba(35, 78, 110, 0.85);
+    z-index: 1;
+}
+
+/* Asegura que el contenido esté siempre sobre el fondo */
+.content-box {
+    position: relative;
+    z-index: 2;
+}
+
+/* Ajuste para las tarjetas en esta sección */
+.info-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    color: white;
+}
+
