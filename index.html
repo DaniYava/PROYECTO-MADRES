@@ -180,33 +180,44 @@
     </div>
 </section>
 <!-- Sección TIPOS Y RECOMENDACIONES -->
-<section id="consejos" class="section-hero" style="background-image: url('https://images.unsplash.com/photo-1531983412531-1f49a365ffed?q=80&w=1470&auto=format&fit=crop');">
+<section id="consejos" class="section-hero" style="background-image: url('resouces/img3.jpg');">
     <div class="overlay" style="background: rgba(0, 50, 100, 0.6);"></div>
     <div class="container content-box">
         <div class="row g-5">
             
-            <!-- IZQUIERDA: TIPOS DE LECHE (50%) -->
-            <div class="col-lg-6">
-                <div class="info-card p-4 h-100 border-start border-info border-4">
-                    <h2 class="text-info fw-bold mb-4 text-uppercase">Tipos de Leche Materna</h2>
-                    <p class="mb-4">Durante el proceso de lactancia, la leche materna cambia según las necesidades del bebé:</p>
-                    
-                    <ul class="list-unstyled text-start">
-                        <li class="mb-3">
-                            <strong class="text-white border-bottom border-info">1. El Calostro:</strong> 
-                            <span class="d-block small text-light opacity-75">Es la primera leche (primeros días). Espesa y amarillenta, rica en anticuerpos y proteínas que protegen al recién nacido.</span>
-                        </li>
-                        <li class="mb-3">
-                            <strong class="text-white border-bottom border-info">2. Leche de Transición:</strong> 
-                            <span class="d-block small text-light opacity-75">Aparece entre el 5° y 10° día. Aumenta en cantidad y aporta mayor energía al bebé.</span>
-                        </li>
-                        <li class="mb-3">
-                            <strong class="text-white border-bottom border-info">3. Leche Madura:</strong> 
-                            <span class="d-block small text-light opacity-75">Se produce después de las dos semanas. Contiene la combinación equilibrada de nutrientes para un crecimiento adecuado.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+<!-- IZQUIERDA: TIPOS DE LECHE (50%) -->
+<div class="col-lg-6">
+    <div class="info-card p-4 h-100 border-start border-info border-4 d-flex flex-column">
+        <h2 class="text-info fw-bold mb-4 text-uppercase">Tipos de Leche Materna</h2>
+        <p class="mb-4">Durante el proceso de lactancia, la leche materna cambia según las necesidades del bebé:</p>
+        
+        <ul class="list-unstyled text-start">
+            <li class="mb-3">
+                <strong class="text-white border-bottom border-info">1. El Calostro:</strong> 
+                <span class="d-block small text-light opacity-75">Es la primera leche (primeros días). Espesa y amarillenta, rica en anticuerpos y proteínas que protegen al recién nacido.</span>
+            </li>
+            <li class="mb-3">
+                <strong class="text-white border-bottom border-info">2. Leche de Transición:</strong> 
+                <span class="d-block small text-light opacity-75">Aparece entre el 5° y 10° día. Aumenta en cantidad y aporta mayor energía al bebé.</span>
+            </li>
+            <li class="mb-3">
+                <strong class="text-white border-bottom border-info">3. Leche Madura:</strong> 
+                <span class="d-block small text-light opacity-75">Se produce después de las dos semanas. Contiene la combinación equilibrada de nutrientes para un crecimiento adecuado.</span>
+            </li>
+        </ul>
+
+        <!-- IMAGEN CORREGIDA CON OPCIÓN DE EXPANDIR -->
+        <div class="mt-auto pt-3 text-center">
+            <p class="small text-info mb-2"><i class="bi bi-zoom-in"></i> Clic para expandir</p>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#modalImagenLeche">
+                <img src="resouces/img4.jpg" 
+                     alt="Tipos de leche materna" 
+                     class="img-fluid rounded-3 shadow-sm img-expandible"
+                     style="max-height: 300px; width: auto; object-fit: contain; cursor: pointer;">
+            </a>
+        </div>
+    </div>
+</div>
 
             <!-- DERECHA: RECOMENDACIONES (50%) -->
             <div class="col-lg-6">
@@ -428,7 +439,26 @@
         </div>
     </section>
 
+<!-- Modal para Expandir Imagen -->
+<div class="modal fade" id="modalImagenLeche" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark border-info">
+            <div class="modal-header border-bottom border-info border-opacity-25">
+                <h5 class="modal-title text-info">Tipos de Leche Materna</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center p-0">
+                <img src="resouces/img4.jpg" class="img-fluid" alt="Imagen expandida">
+            </div>
+            <div class="modal-footer border-top border-info border-opacity-25">
+                <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
